@@ -1,0 +1,19 @@
+>>> import random 
+>>> from first application.models import p_id, p_name, p_contact, p_address
+>>> names = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Hank", "Ivy", "Jack", "Karen", "Leo", "Mona", "Nina", "Oscar", "Paul", "Quinn", "Rita", "Sam", "Tina", "Uma", "Vince", "Wade", "Xena", "Yara", "Zack", "Avery", "Brooke", "Casey", "Drew"] 
+
+>>> for i in range(1, 31): 
+...     pname = p_name(p_name=random.choice(names))	
+...     pname.save()
+
+>>> for i in range(1,31):
+...     pcontact = p_contact(p_contact=f'+123456789{i:02}')
+...     pcontact.save()
+
+>>> for i in range(1,31):
+...     paddress = p_address(p_address=f'{i} Main Street, City {i}')
+...     paddress.save()
+... 
+>>> for i in range(1,31):
+...     pid=p_id(p_id=i)
+...     pid.save()
